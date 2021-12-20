@@ -89,10 +89,6 @@ function PlugName(){}
 PlugName.prototype.before=function(config){
     // todo
 };
-
-PlugName.prototype.after=function(config){
-    // todo
-};
     </pre>
     <h4 id='fixed-config-items-mode'>
         mode
