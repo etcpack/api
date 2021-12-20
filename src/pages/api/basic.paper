@@ -71,16 +71,28 @@ function(source) {
     <p>
         如果是字符串，会引入字符串对应的包进行处理，包应该导出一个函数，格式和上面函数一样。
     </p>
-    <h4 id='fixed-config-items-task'>
-        task
+    <h4 id='fixed-config-items-plug'>
+        plug
     </h4>
     <p>
-        可选，类似生命周期，在特定时期触发。可选的钩子如下：
+        可选，类似生命周期，在特定时期触发。
     </p>
     <pre q-code>
-task:{
+plug:[new PlugName(),...]
+    </pre>
+    <p>
+        可以看见，值是一个数组，可以存放很多插件，插件是一个个实例对象，格式如下：
+    </p>
+    <pre q-code>
+function PlugName(){}
 
-}
+PlugName.prototype.before=function(config){
+    // todo
+};
+
+PlugName.prototype.after=function(config){
+    // todo
+};
     </pre>
     <h4 id='fixed-config-items-mode'>
         mode

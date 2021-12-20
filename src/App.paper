@@ -9,6 +9,9 @@
                 文档
             </span>
             <span>
+                <a href="https://github.com/etcpack" target="_blank">开源社区</a>
+            </span>
+            <span>
                 <a href="https://github.com/etcpack/etcpack" target="_blank">GitHub</a>
             </span>
             <ui-search></ui-search>
@@ -91,7 +94,6 @@
 
                     &>a {
                         position: relative;
-                        margin-right: 30px;
 
                         &::after {
                             position: absolute;
