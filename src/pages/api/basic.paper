@@ -97,7 +97,7 @@ function PlugName(){}
     </p>
     <pre q-code>
 PlugName.prototype.before=function(config){
-    // todo
+    // 对config配置的一些处理
 };
     </pre>
     <h5 id='fixed-config-items-plug-afterLoader'>
@@ -108,7 +108,8 @@ PlugName.prototype.before=function(config){
     </p>
     <pre q-code>
 PlugName.prototype.afterLoader=function(config, info){
-    // todo
+    // 主要是对info.source的一些处理
+    return info;
 };
     </pre>
     <p>
