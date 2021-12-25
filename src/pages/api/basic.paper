@@ -85,10 +85,41 @@ plug:[new PlugName(),...]
     </p>
     <pre q-code>
 function PlugName(){}
-
+    </pre>
+    <p>
+        我们可以通过插件的钩子来在特定时机进行操作，可以使用的钩子如下：
+    </p>
+    <h5 id='fixed-config-items-plug-before'>
+        before
+    </h5>
+    <p>
+        打包程序启动后，在正式执行前运行，你可以通过此对配置文件进行校对。
+    </p>
+    <pre q-code>
 PlugName.prototype.before=function(config){
     // todo
 };
+    </pre>
+    <h5 id='fixed-config-items-plug-afterLoader'>
+        afterLoader
+    </h5>
+    <p>
+        对于配置了loader的文件，通过此钩子，你可以对处理的文件进一步进行处理。
+    </p>
+    <pre q-code>
+PlugName.prototype.afterLoader=function(config, info){
+    // todo
+};
+    </pre>
+    <p>
+        其中info带有当前面对的代码信息，格式如下：
+    </p>
+    <pre q-code>
+info = {
+    source: "loader处理后的代码",
+    filepath: "代码对应的文件地址",
+    params: "当前文件全路径携带的额外信息"
+}
     </pre>
     <h4 id='fixed-config-items-mode'>
         mode

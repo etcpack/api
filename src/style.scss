@@ -16,6 +16,15 @@ div.doc-view {
     &>h2 {
         font-size: 18px;
     }
+
+    &>h5 {
+        font-size: 12px;
+
+        &::before {
+            content: "·";
+            color: rgb(255, 0, 0);
+        }
+    }
 }
 
 .link {
