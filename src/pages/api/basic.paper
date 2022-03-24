@@ -56,6 +56,9 @@ redirect: {
     <pre q-code>
 loader: [{
     test: /\.(js|ts)$/,
+    filter(filepath) {
+        // 可选，返回boolean值，用于控制导出的文件是否需要经过handler处理
+    },
     handler:Array<Function|String>
 },...]
     </pre>
@@ -71,6 +74,15 @@ function(source) {
     <p>
         如果是字符串，会引入字符串对应的包进行处理，包应该导出一个函数，格式和上面函数一样。
     </p>
+    <p>
+        此外，如果有需要传递给具体的handler的特殊配置，还可以这样写：
+    </p>
+    <pre q-code>
+handler:[{
+    config:any,
+    use:Function|String
+},...]
+    </pre>
     <h4 id='fixed-config-items-plug'>
         plug
     </h4>
